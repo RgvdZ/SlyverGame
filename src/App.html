@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mystic Heist</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .title {
+            font-size: 5em;
+            color: goldenrod;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .game-container {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game">
+        <h1 class="title">Mystic Heist</h1>
+        <h1 class="game-name">Mystic Heist</h1>
+        <button id="startButton" style="display: none;">Start Quest</button>
+        <div class="game-container">
+            <!-- Your game content goes here -->
+            <div id="number-box-1">{/* Your number box content here */}</div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <ul id="movesList" class="moves-list">
+            <!-- List items -->
+        </ul>
+        </div>
+    </div>
+    <script src="App.js"></script> <!-- Your JavaScript file -->
+</body>
+
+</html>

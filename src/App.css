@@ -1,0 +1,265 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+
+.title {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+/* .game-container {
+  display: grid;
+  grid-template-columns: repeat(10, calc((90vw - 90px) / 14));
+  grid-gap: 10px;
+  width: 90vw;
+  height: calc(90vh * 0.7071);
+  transition: visibility 0s 2s, opacity 2s linear;
+  justify-content: space-around;
+} */
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  padding: 20px;
+  opacity: 1;
+}
+
+@font-face {
+  font-family: 'Quantum';
+  src: url('C:/Users/rugve/OneDrive/Pictures/dumpp/CombiGames/sylver-coinage/OTF/Quantum_Bold.otf') format('opentype'),
+    url('C: /Users/rugve/OneDrive/Pictures/dumpp/CombiGames/sylver-coinage/OTF/Quantum_Bold.ttf') format('truetype');
+}
+
+.game-name {
+  font-family: 'Quantum';
+  color: yellow;
+}
+
+.GameHistory {
+  flex: 0 0 300px;
+  display: inline-block;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 5em;
+  color: goldenrod;
+  text-align: center;
+  opacity: 1;
+}
+
+
+/* .start-button {
+  padding: 1em 2em;
+  font-size: 1.5em;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #ddd;
+} */
+.start-button {
+  border: 2px solid red;
+  /* Add a red border */
+  background: transparent;
+  /* Make the background transparent */
+  color: red;
+  /* Make the text red */
+  padding: 10px 20px;
+  /* Add some padding */
+  font-size: 1.5em;
+  /* Increase the font size */
+  cursor: pointer;
+  /* Change the cursor when hovering over the button */
+}
+
+.start-button:hover {
+  background: red;
+  /* Change the background to red when hovering */
+  color: white;
+  /* Change the text to white when hovering */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 90vw;
+  margin: auto;
+}
+
+.GameBoard {
+  display: grid;
+  grid-template-columns: repeat(10, calc((90vw - 90px) / 14));
+  grid-gap: 10px;
+  width: 90vw;
+  height: calc(90vh * 0.7071);
+}
+
+.GameBoard button {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .moves-list p {
+  color: yellow;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Courier+New&display=swap');
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+div.moves-list {
+  position: absolute;
+    right: 200px;
+    /* Adjust this value as needed */
+
+  /* Shifts the moves list to the left */
+  font-weight: bold;
+  /* Makes the text bold */
+  font-size: 30px;
+    /* Increase the font size */
+  animation: grow 3s;
+}
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Keyframes for the animation */
+@keyframes color-change {
+  0% {
+    color: black;
+  }
+
+  50% {
+    color: red;
+  }
+
+  100% {
+    color: black;
+  }
+}
+
+@media (max-width: 600px) {
+  .GameBoard button {
+    font-size: 2vw;
+    /* Adjust font size for smaller screens */
+  }
+}
+
+.number-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
